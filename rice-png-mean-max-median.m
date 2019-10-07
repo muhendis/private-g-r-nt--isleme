@@ -3,7 +3,7 @@ clear all
 clc
 
 
-%%
+%%%
 resim=imread('rice.png');
 
 [row,column]=size(resim);
@@ -12,16 +12,16 @@ filter_n = 2 %filtre 3 boyutlu fakat matlab son sayıyı dahil ettiği için 2
 
 filter_leng=9; %filtre boyutu : 3*3=9
 
-%%
+
 %%%%%%% oluşacak matrislerin boyutu :
 % ((resim_n-filtre_n)/step)+1 * ((resim_n-filtre_n)/step)+1
 % 3 adımlı filtre için : ((256-3)/3)+1 = 86* 86
 % 1 adımlı filtre için : ((256-3)/1)+1 = 254*254
 
-%% 3 adım için
-mean_3_step=zeros(86,86)
-max_3_step=zeros(86,86)
-median_3_step=zeros(86,86)
+%%% 3 adım için
+mean_3_step=zeros(85,85)
+max_3_step=zeros(85,85)
+median_3_step=zeros(85,85)
 
 
 filter_step=3; % adımlar için 
@@ -62,8 +62,7 @@ for i=1:filter_step:(row-filter_n)
    
 end
 
-%%
-
+%%% 1 adım için
 mean_1_step=zeros(254,254)
 max_1_step=zeros(254,254)
 median_1_step=zeros(254,254)
