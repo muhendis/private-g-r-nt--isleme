@@ -107,5 +107,13 @@ for i=1:filter_step:(row-filter_n)
 end
 
 
+figure,imshow(uint8(median_1_step))
+figure,imshow(uint8(max_1_step))
+figure,imshow(uint8(mean_1_step))
+
+figure,imshow(uint8(median_3_step))
+figure,imshow(uint8(max_3_step))
+figure,imshow(uint8(mean_3_step))
+
 
 
